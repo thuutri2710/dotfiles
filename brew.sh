@@ -58,6 +58,7 @@ brew install fzf
 brew install tree
 brew install node
 brew install fd
+brew install ag
 
 # Applications
 # brew cask install --appdir="/Applications" your-app
