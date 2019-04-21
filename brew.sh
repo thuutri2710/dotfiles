@@ -57,6 +57,7 @@ brew install tmux
 brew install fzf
 brew install tree
 brew install node
+brew install fd
 
 # Applications
 # brew cask install --appdir="/Applications" your-app
