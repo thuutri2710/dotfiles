@@ -287,6 +287,10 @@ nmap <leader>ss :call StripTrailingWhitespaces()<CR>
 " [,* ] Search and replace the word under the cursor.
 nmap <leader>* :%s/\<<C-r><C-w>\>//<Left>
 
+" copy visual selection to clipboard (macOS)
+map <leader>cp :w !pbcopy<CR><CR>
+" copy all file to clipboard (macOS)
+map <leader>cw :%w !pbcopy<CR><CR>
 """"""""""""""""""""
 " Automatic commands
 """"""""""""""""""""
@@ -549,3 +553,5 @@ let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
 let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 set termguicolors
 set term=xterm-256color
+
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
