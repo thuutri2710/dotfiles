@@ -222,14 +222,15 @@ set ttimeout
 set ttimeoutlen=50
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Mappings for moving lines and preserving indentation
-" http://vim.wikia.com/wiki/Moving_lines_up_or_down
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
-inoremap <C-j> :m .+1<CR>==gi
-inoremap <C-k> :m .-2<CR>==gi
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
+" move lines up and down with ALT+J/K
+execute "set <M-j>=\ej"
+execute "set <M-k>=\ek"
+nnoremap <M-Down> :m .+1<CR>==
+nnoremap <M-Up> :m .-2<CR>==
+inoremap <M-Down> <Esc>:m .+1<CR>==gi
+inoremap <M-Up> <Esc>:m .-2<CR>==gi
+vnoremap <M-Down> :m '>+1<CR>gv=gv
+vnoremap <M-Up> :m '<-2<CR>gv=gv
 
 " Move windows around (only works on same row)
 noremap <C-S-Right> <C-w>r
