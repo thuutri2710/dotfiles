@@ -171,3 +171,7 @@ alias vf='vim $(fzf)'
 alias v='vim'
 alias tre="tree -I 'node_modules|dist|build' -L 3"
 alias tree="tree -I 'node_modules|dist|build'"
+alias tmux="tmux -u"
+alias copyssh="pbcopy < ~/.ssh/id_rsa.pub"
+
+alias ctags="`brew --prefix`/bin/ctags"
