@@ -59,6 +59,7 @@ brew install tree
 brew install node
 brew install fd
 brew install ag
+brew install ctags
 
 # Applications
 # brew cask install --appdir="/Applications" your-app

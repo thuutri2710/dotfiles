@@ -1,1307 +1,1527 @@
 {
-	"global": {
-		"check_for_updates_on_startup": true,
-		"show_in_menu_bar": true,
-		"show_profile_name_in_menu_bar": false
-	},
-	"profiles": [
-		{
-			"complex_modifications": {
-				"parameters": {
-					"basic.simultaneous_threshold_milliseconds": 50,
-					"basic.to_delayed_action_delay_milliseconds": 500,
-					"basic.to_if_alone_timeout_milliseconds": 1000,
-					"basic.to_if_held_down_threshold_milliseconds": 500
-				},
-				"rules": [
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + [ to ESC.",
-								"from": {
-									"key_code": "open_bracket",
-									"modifiers": {
-										"mandatory": [
-											"left_command",
-											"left_control",
-											"left_option"
-										],
-										"optional": ["any"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "escape",
-										"modifiers": ["any"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + a to command+control+option+shift.",
-								"from": {
-									"key_code": "a",
-									"modifiers": {
-										"mandatory": [
-											"left_command",
-											"left_control",
-											"left_option"
-										],
-										"optional": ["any"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "right_shift",
-										"modifiers": ["left_command", "left_control", "left_option"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock to command+control+option.",
-								"from": {
-									"key_code": "caps_lock",
-									"modifiers": {
-										"optional": ["any"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "left_command",
-										"modifiers": ["left_control", "left_option"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + q to control.",
-								"from": {
-									"key_code": "q",
-									"modifiers": {
-										"mandatory": [
-											"left_command",
-											"left_control",
-											"left_option"
-										],
-										"optional": ["any"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "left_control",
-										"modifiers": [""]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + s to shift.",
-								"from": {
-									"key_code": "s",
-									"modifiers": {
-										"mandatory": [
-											"left_command",
-											"left_control",
-											"left_option"
-										],
-										"optional": ["any"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "left_shift",
-										"modifiers": ["right_option", "right_command"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + h to left_arrow.",
-								"from": {
-									"key_code": "h",
-									"modifiers": {
-										"mandatory": ["left_command", "left_control", "left_option"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "left_arrow",
-										"modifiers": ["any"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + j to down_arrow.",
-								"from": {
-									"key_code": "j",
-									"modifiers": {
-										"mandatory": ["left_command", "left_control", "left_option"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "down_arrow",
-										"modifiers": ["any"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + k to up_arrow.",
-								"from": {
-									"key_code": "k",
-									"modifiers": {
-										"mandatory": ["left_command", "left_control", "left_option"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "up_arrow",
-										"modifiers": ["any"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + l to right_arrow.",
-								"from": {
-									"key_code": "l",
-									"modifiers": {
-										"mandatory": ["left_command", "left_control", "left_option"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "right_arrow",
-										"modifiers": ["any"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + a + h to left_arrow.",
-								"from": {
-									"key_code": "h",
-									"modifiers": {
-										"mandatory": [
-											"right_shift",
-											"left_command",
-											"left_control",
-											"left_option"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "left_arrow",
-										"modifiers": [
-											"right_shift",
-											"left_command",
-											"left_control",
-											"left_option"
-										]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + a + j to down_arrow.",
-								"from": {
-									"key_code": "j",
-									"modifiers": {
-										"mandatory": [
-											"right_shift",
-											"left_command",
-											"left_control",
-											"left_option"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "down_arrow",
-										"modifiers": [
-											"right_shift",
-											"left_command",
-											"left_control",
-											"left_option"
-										]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + a + k to up_arrow.",
-								"from": {
-									"key_code": "k",
-									"modifiers": {
-										"mandatory": [
-											"right_shift",
-											"left_command",
-											"left_control",
-											"left_option"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "up_arrow",
-										"modifiers": [
-											"right_shift",
-											"left_command",
-											"left_control",
-											"left_option"
-										]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + a + l to right_arrow.",
-								"from": {
-									"key_code": "l",
-									"modifiers": {
-										"mandatory": [
-											"right_shift",
-											"left_command",
-											"left_control",
-											"left_option"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "right_arrow",
-										"modifiers": [
-											"right_shift",
-											"left_command",
-											"left_control",
-											"left_option"
-										]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + shift + h to left_arrow.",
-								"from": {
-									"key_code": "h",
-									"modifiers": {
-										"mandatory": ["left_shift", "right_command", "right_option"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "left_arrow",
-										"modifiers": ["left_shift"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + shift + j to left_arrow.",
-								"from": {
-									"key_code": "j",
-									"modifiers": {
-										"mandatory": ["left_shift", "right_command", "right_option"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "down_arrow",
-										"modifiers": ["left_shift"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + shift + k to left_arrow.",
-								"from": {
-									"key_code": "k",
-									"modifiers": {
-										"mandatory": ["left_shift", "right_command", "right_option"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "up_arrow",
-										"modifiers": ["left_shift"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + shift + l to left_arrow.",
-								"from": {
-									"key_code": "l",
-									"modifiers": {
-										"mandatory": ["left_shift", "right_command", "right_option"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "right_arrow",
-										"modifiers": ["left_shift"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"description": "Change option + h/j/k/l to option + Arrows",
-						"manipulators": [
-							{
-								"from": {
-									"key_code": "h",
-									"modifiers": {
-										"mandatory": ["left_option"],
-										"optional": ["caps_lock"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "left_arrow",
-										"modifiers": ["left_option"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "j",
-									"modifiers": {
-										"mandatory": ["left_option"],
-										"optional": ["caps_lock"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "down_arrow",
-										"modifiers": ["left_option"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "k",
-									"modifiers": {
-										"mandatory": ["left_option"],
-										"optional": ["caps_lock"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "up_arrow",
-										"modifiers": ["left_option"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "l",
-									"modifiers": {
-										"mandatory": ["left_option"],
-										"optional": ["caps_lock"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "right_arrow",
-										"modifiers": ["left_option"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"description": "Change option + shift + h/j/k/l to option + shift + Arrows",
-						"manipulators": [
-							{
-								"from": {
-									"key_code": "h",
-									"modifiers": {
-										"mandatory": ["left_option", "left_shift"],
-										"optional": ["caps_lock"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "left_arrow",
-										"modifiers": ["left_option", "left_shift"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "j",
-									"modifiers": {
-										"mandatory": ["left_option", "left_shift"],
-										"optional": ["caps_lock"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "down_arrow",
-										"modifiers": ["left_option", "left_shift"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "k",
-									"modifiers": {
-										"mandatory": ["left_option", "left_shift"],
-										"optional": ["caps_lock"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "up_arrow",
-										"modifiers": ["left_option", "left_shift"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "l",
-									"modifiers": {
-										"mandatory": ["left_option", "left_shift"],
-										"optional": ["caps_lock"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "right_arrow",
-										"modifiers": ["left_option", "left_shift"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + d to (right) shift + option + command.",
-								"from": {
-									"key_code": "d",
-									"modifiers": {
-										"mandatory": [
-											"left_command",
-											"left_control",
-											"left_option"
-										],
-										"optional": ["any"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "right_shift",
-										"modifiers": ["right_option", "right_command"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"description": "Change option + shift + h/j/k/l to option + shift + Arrows",
-						"manipulators": [
-							{
-								"from": {
-									"key_code": "h",
-									"modifiers": {
-										"mandatory": [
-											"right_shift",
-											"right_option",
-											"right_command"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "left_arrow",
-										"modifiers": ["left_option"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "j",
-									"modifiers": {
-										"mandatory": [
-											"right_shift",
-											"right_option",
-											"right_command"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "down_arrow",
-										"modifiers": ["left_option"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "k",
-									"modifiers": {
-										"mandatory": [
-											"right_shift",
-											"right_option",
-											"right_command"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "up_arrow",
-										"modifiers": ["left_option"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "l",
-									"modifiers": {
-										"mandatory": [
-											"right_shift",
-											"right_option",
-											"right_command"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "right_arrow",
-										"modifiers": ["left_option"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + c to (right) shift + (left) option + (right) command.",
-								"from": {
-									"key_code": "c",
-									"modifiers": {
-										"mandatory": [
-											"left_command",
-											"left_control",
-											"left_option"
-										],
-										"optional": ["any"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "right_shift",
-										"modifiers": ["left_option", "right_command"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"description": "Change command + h/j/k/l to command + Arrows",
-						"manipulators": [
-							{
-								"from": {
-									"key_code": "h",
-									"modifiers": {
-										"mandatory": ["right_shift", "left_option", "right_command"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "left_arrow",
-										"modifiers": ["left_command"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "j",
-									"modifiers": {
-										"mandatory": ["right_shift", "left_option", "right_command"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "down_arrow",
-										"modifiers": ["left_command"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "k",
-									"modifiers": {
-										"mandatory": ["right_shift", "left_option", "right_command"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "up_arrow",
-										"modifiers": ["left_command"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "l",
-									"modifiers": {
-										"mandatory": ["right_shift", "left_option", "right_command"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "right_arrow",
-										"modifiers": ["left_command"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + x to (right) shift + (left) option + (right) command + (left) ctrl.",
-								"from": {
-									"key_code": "x",
-									"modifiers": {
-										"mandatory": [
-											"left_command",
-											"left_control",
-											"left_option"
-										],
-										"optional": ["any"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "left_shift",
-										"modifiers": [
-											"left_option",
-											"right_command",
-											"left_control"
-										]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"description": "Change shift + option + h/j/k/l to shift + option + Arrows",
-						"manipulators": [
-							{
-								"from": {
-									"key_code": "h",
-									"modifiers": {
-										"mandatory": [
-											"left_shift",
-											"left_option",
-											"right_command",
-											"left_control"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "left_arrow",
-										"modifiers": ["left_shift", "left_option"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "j",
-									"modifiers": {
-										"mandatory": [
-											"left_shift",
-											"left_option",
-											"right_command",
-											"left_control"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "down_arrow",
-										"modifiers": ["left_shift", "left_option"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "k",
-									"modifiers": {
-										"mandatory": [
-											"left_shift",
-											"left_option",
-											"right_command",
-											"left_control"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "up_arrow",
-										"modifiers": ["left_shift", "left_option"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "l",
-									"modifiers": {
-										"mandatory": [
-											"left_shift",
-											"left_option",
-											"right_command",
-											"left_control"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "right_arrow",
-										"modifiers": ["left_shift", "left_option"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + z to (right) command + (right) option + (right) shift + (left) ctrl.",
-								"from": {
-									"key_code": "z",
-									"modifiers": {
-										"mandatory": [
-											"left_command",
-											"left_control",
-											"left_option"
-										],
-										"optional": ["any"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "right_shift",
-										"modifiers": [
-											"right_command",
-											"left_option",
-											"left_control"
-										]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"description": "Change command + option + h/j/k/l to command + option + Arrows",
-						"manipulators": [
-							{
-								"from": {
-									"key_code": "h",
-									"modifiers": {
-										"mandatory": [
-											"right_shift",
-											"right_command",
-											"left_option",
-											"left_control"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "left_arrow",
-										"modifiers": ["left_command", "left_option"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "j",
-									"modifiers": {
-										"mandatory": [
-											"right_shift",
-											"right_command",
-											"left_option",
-											"left_control"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "down_arrow",
-										"modifiers": ["left_command", "left_option"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "k",
-									"modifiers": {
-										"mandatory": [
-											"right_shift",
-											"right_command",
-											"left_option",
-											"left_control"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "up_arrow",
-										"modifiers": ["left_command", "left_option"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "l",
-									"modifiers": {
-										"mandatory": [
-											"right_shift",
-											"right_command",
-											"left_option",
-											"left_control"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "right_arrow",
-										"modifiers": ["left_command", "left_option"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + f to (right) command + (right) option + (right) shift + (left) ctrl.",
-								"from": {
-									"key_code": "f",
-									"modifiers": {
-										"mandatory": [
-											"left_option",
-											"left_command",
-											"left_control"
-										],
-										"optional": ["any"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "left_shift",
-										"modifiers": ["left_command", "left_option", "left_control"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"description": "Change command + shift + h/j/k/l to command + shift + Arrows",
-						"manipulators": [
-							{
-								"from": {
-									"key_code": "h",
-									"modifiers": {
-										"mandatory": [
-											"left_shift",
-											"left_option",
-											"left_command",
-											"left_control"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "left_arrow",
-										"modifiers": ["left_command", "left_shift"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "j",
-									"modifiers": {
-										"mandatory": [
-											"left_shift",
-											"left_option",
-											"left_command",
-											"left_control"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "down_arrow",
-										"modifiers": ["left_command", "left_shift"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "k",
-									"modifiers": {
-										"mandatory": [
-											"left_shift",
-											"left_option",
-											"left_command",
-											"left_control"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "up_arrow",
-										"modifiers": ["left_command", "left_shift"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "l",
-									"modifiers": {
-										"mandatory": [
-											"left_shift",
-											"left_option",
-											"left_command",
-											"left_control"
-										]
-									}
-								},
-								"to": [
-									{
-										"key_code": "right_arrow",
-										"modifiers": ["left_command", "left_shift"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"manipulators": [
-							{
-								"description": "Change caps_lock + tab to delete.",
-								"from": {
-									"key_code": "tab",
-									"modifiers": {
-										"mandatory": [
-											"left_command",
-											"left_control",
-											"left_option"
-										],
-										"optional": ["any"]
-									}
-								},
-								"to": [
-									{
-										"key_code": "delete_or_backspace",
-										"modifiers": ["any"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					},
-					{
-						"description": "Turn of ESC & arrow",
-						"manipulators": [
-							{
-								"from": {
-									"key_code": "left_arrow",
-									"modifiers": ["any"]
-								},
-								"to": [
-									{
-										"key_code": "",
-										"modifiers": ["any"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "right_arrow",
-									"modifiers": ["any"]
-								},
-								"to": [
-									{
-										"key_code": "",
-										"modifiers": ["any"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "up_arrow",
-									"modifiers": ["any"]
-								},
-								"to": [
-									{
-										"key_code": "",
-										"modifiers": ["any"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "down_arrow",
-									"modifiers": ["any"]
-								},
-								"to": [
-									{
-										"key_code": "",
-										"modifiers": ["any"]
-									}
-								],
-								"type": "basic"
-							},
-							{
-								"from": {
-									"key_code": "escape",
-									"modifiers": ["any"]
-								},
-								"to": [
-									{
-										"key_code": "",
-										"modifiers": ["any"]
-									}
-								],
-								"type": "basic"
-							}
-						]
-					}
-				]
-			},
-			"devices": [
-				{
-					"disable_built_in_keyboard_if_exists": false,
-					"fn_function_keys": [],
-					"identifiers": {
-						"is_keyboard": true,
-						"is_pointing_device": false,
-						"product_id": 632,
-						"vendor_id": 1452
-					},
-					"ignore": false,
-					"manipulate_caps_lock_led": true,
-					"simple_modifications": []
-				}
-			],
-			"fn_function_keys": [
-				{
-					"from": {
-						"key_code": "f1"
-					},
-					"to": {
-						"consumer_key_code": "display_brightness_decrement"
-					}
-				},
-				{
-					"from": {
-						"key_code": "f2"
-					},
-					"to": {
-						"consumer_key_code": "display_brightness_increment"
-					}
-				},
-				{
-					"from": {
-						"key_code": "f3"
-					},
-					"to": {
-						"key_code": "mission_control"
-					}
-				},
-				{
-					"from": {
-						"key_code": "f4"
-					},
-					"to": {
-						"key_code": "launchpad"
-					}
-				},
-				{
-					"from": {
-						"key_code": "f5"
-					},
-					"to": {
-						"key_code": "illumination_decrement"
-					}
-				},
-				{
-					"from": {
-						"key_code": "f6"
-					},
-					"to": {
-						"key_code": "illumination_increment"
-					}
-				},
-				{
-					"from": {
-						"key_code": "f7"
-					},
-					"to": {
-						"consumer_key_code": "rewind"
-					}
-				},
-				{
-					"from": {
-						"key_code": "f8"
-					},
-					"to": {
-						"consumer_key_code": "play_or_pause"
-					}
-				},
-				{
-					"from": {
-						"key_code": "f9"
-					},
-					"to": {
-						"consumer_key_code": "fastforward"
-					}
-				},
-				{
-					"from": {
-						"key_code": "f10"
-					},
-					"to": {
-						"consumer_key_code": "mute"
-					}
-				},
-				{
-					"from": {
-						"key_code": "f11"
-					},
-					"to": {
-						"consumer_key_code": "volume_decrement"
-					}
-				},
-				{
-					"from": {
-						"key_code": "f12"
-					},
-					"to": {
-						"consumer_key_code": "volume_increment"
-					}
-				}
-			],
-			"name": "vscode",
-			"selected": true,
-			"simple_modifications": [],
-			"virtual_hid_keyboard": {
-				"country_code": 0
-			}
-		}
-	]
+  "global": {
+    "check_for_updates_on_startup": true,
+    "show_in_menu_bar": true,
+    "show_profile_name_in_menu_bar": false
+  },
+  "profiles": [
+    {
+      "complex_modifications": {
+        "parameters": {
+          "basic.simultaneous_threshold_milliseconds": 50,
+          "basic.to_delayed_action_delay_milliseconds": 500,
+          "basic.to_if_alone_timeout_milliseconds": 1000,
+          "basic.to_if_held_down_threshold_milliseconds": 100
+        },
+        "rules": [
+          {
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["com.microsoft.VSCode"],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "description": "Change caps_lock + / to Open VSCode.",
+                "from": {
+                  "key_code": "slash",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open '/Applications/Visual Studio Code.app'"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + . to Open VSCode.",
+                "from": {
+                  "key_code": "period",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open '/Applications/Google Chrome.app'"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + [ to ESC.",
+                "from": {
+                  "key_code": "open_bracket",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "escape",
+                    "modifiers": ["any"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + 2 to comma/vim leader (if terminal is infront).",
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "net.kovidgoyal.kitty",
+                      "com.googlecode.iterm2"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "2",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "comma",
+                    "modifiers": ["any"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + 3 to ctrl + g (if termial is infront)",
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "net.kovidgoyal.kitty",
+                      "com.googlecode.iterm2"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "3",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "g",
+                    "modifiers": ["left_control"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + a to command+control+option+shift(unless terminal is infront)",
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "net.kovidgoyal.kitty",
+                      "com.googlecode.iterm2"
+                    ],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "a",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_shift",
+                    "modifiers": ["left_command", "left_control", "left_option"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + a to ctrl + a (if terminal is infront)",
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "net.kovidgoyal.kitty",
+                      "com.googlecode.iterm2"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "a",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "a",
+                    "modifiers": ["left_control"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock to command+control+option.",
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_command",
+                    "modifiers": ["left_control", "left_option"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + q to control.",
+                "from": {
+                  "key_code": "q",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_control",
+                    "modifiers": [""]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + s to shift.",
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": ["right_option", "right_command"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + h to left_arrow.",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": ["left_command", "left_control", "left_option"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": ["any"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + j to down_arrow.",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": ["left_command", "left_control", "left_option"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow",
+                    "modifiers": ["any"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + k to up_arrow.",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": ["left_command", "left_control", "left_option"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "up_arrow",
+                    "modifiers": ["any"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + l to right_arrow.",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": ["left_command", "left_control", "left_option"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": ["any"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + a + h to left_arrow.",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift",
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                      "right_shift",
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + a + j to down_arrow.",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift",
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow",
+                    "modifiers": [
+                      "right_shift",
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + a + k to up_arrow.",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift",
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "up_arrow",
+                    "modifiers": [
+                      "right_shift",
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + a + l to right_arrow.",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift",
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "right_shift",
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + shift + h to left_arrow.",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": ["left_shift", "right_command", "right_option"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": ["left_shift"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + shift + j to left_arrow.",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": ["left_shift", "right_command", "right_option"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow",
+                    "modifiers": ["left_shift"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + shift + k to left_arrow.",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": ["left_shift", "right_command", "right_option"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "up_arrow",
+                    "modifiers": ["left_shift"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + shift + l to left_arrow.",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": ["left_shift", "right_command", "right_option"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": ["left_shift"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Change option + h/j/k/l to option + Arrows",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": ["left_option"],
+                    "optional": ["caps_lock"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": ["left_option"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": ["left_option"],
+                    "optional": ["caps_lock"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow",
+                    "modifiers": ["left_option"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": ["left_option"],
+                    "optional": ["caps_lock"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "up_arrow",
+                    "modifiers": ["left_option"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": ["left_option"],
+                    "optional": ["caps_lock"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": ["left_option"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Change option + shift + h/j/k/l to option + shift + Arrows",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": ["left_option", "left_shift"],
+                    "optional": ["caps_lock"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": ["left_option", "left_shift"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": ["left_option", "left_shift"],
+                    "optional": ["caps_lock"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow",
+                    "modifiers": ["left_option", "left_shift"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": ["left_option", "left_shift"],
+                    "optional": ["caps_lock"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "up_arrow",
+                    "modifiers": ["left_option", "left_shift"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": ["left_option", "left_shift"],
+                    "optional": ["caps_lock"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": ["left_option", "left_shift"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + d to (right) shift + option + command.",
+                "from": {
+                  "key_code": "d",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_shift",
+                    "modifiers": ["right_option", "right_command"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Change option + shift + h/j/k/l to option + shift + Arrows",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift",
+                      "right_option",
+                      "right_command"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": ["left_option"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift",
+                      "right_option",
+                      "right_command"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow",
+                    "modifiers": ["left_option"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift",
+                      "right_option",
+                      "right_command"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "up_arrow",
+                    "modifiers": ["left_option"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift",
+                      "right_option",
+                      "right_command"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": ["left_option"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + c to (right) shift + (left) option + (right) command.",
+                "from": {
+                  "key_code": "c",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_shift",
+                    "modifiers": ["left_option", "right_command"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Change command + h/j/k/l to command + Arrows",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": ["right_shift", "left_option", "right_command"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": ["left_command"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": ["right_shift", "left_option", "right_command"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow",
+                    "modifiers": ["left_command"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": ["right_shift", "left_option", "right_command"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "up_arrow",
+                    "modifiers": ["left_command"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": ["right_shift", "left_option", "right_command"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": ["left_command"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + x to (right) shift + (left) option + (right) command + (left) ctrl.",
+                "from": {
+                  "key_code": "x",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                      "left_option",
+                      "right_command",
+                      "left_control"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Change shift + option + h/j/k/l to shift + option + Arrows",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift",
+                      "left_option",
+                      "right_command",
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": ["left_shift", "left_option"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift",
+                      "left_option",
+                      "right_command",
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow",
+                    "modifiers": ["left_shift", "left_option"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift",
+                      "left_option",
+                      "right_command",
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "up_arrow",
+                    "modifiers": ["left_shift", "left_option"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift",
+                      "left_option",
+                      "right_command",
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": ["left_shift", "left_option"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + z to (right) command + (right) option + (right) shift + (left) ctrl.",
+                "from": {
+                  "key_code": "z",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_shift",
+                    "modifiers": [
+                      "right_command",
+                      "left_option",
+                      "left_control"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Change command + option + h/j/k/l to command + option + Arrows",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift",
+                      "right_command",
+                      "left_option",
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": ["left_command", "left_option"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift",
+                      "right_command",
+                      "left_option",
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow",
+                    "modifiers": ["left_command", "left_option"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift",
+                      "right_command",
+                      "left_option",
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "up_arrow",
+                    "modifiers": ["left_command", "left_option"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift",
+                      "right_command",
+                      "left_option",
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": ["left_command", "left_option"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + f to (right) command + (right) option + (right) shift + (left) ctrl.",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_option",
+                      "left_command",
+                      "left_control"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": ["left_command", "left_option", "left_control"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Change command + shift + h/j/k/l to command + shift + Arrows",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift",
+                      "left_option",
+                      "left_command",
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": ["left_command", "left_shift"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift",
+                      "left_option",
+                      "left_command",
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow",
+                    "modifiers": ["left_command", "left_shift"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift",
+                      "left_option",
+                      "left_command",
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "up_arrow",
+                    "modifiers": ["left_command", "left_shift"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift",
+                      "left_option",
+                      "left_command",
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": ["left_command", "left_shift"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + tab to delete.",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": ["any"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "devices": [
+        {
+          "disable_built_in_keyboard_if_exists": false,
+          "fn_function_keys": [],
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": false,
+            "product_id": 632,
+            "vendor_id": 1452
+          },
+          "ignore": false,
+          "manipulate_caps_lock_led": true,
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "f1"
+              },
+              "to": {
+                "key_code": "1"
+              }
+            }
+          ]
+        }
+      ],
+      "fn_function_keys": [
+        {
+          "from": {
+            "key_code": "f1"
+          },
+          "to": {
+            "consumer_key_code": "display_brightness_decrement"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f2"
+          },
+          "to": {
+            "consumer_key_code": "display_brightness_increment"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f3"
+          },
+          "to": {
+            "key_code": "mission_control"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f4"
+          },
+          "to": {
+            "key_code": "launchpad"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f5"
+          },
+          "to": {
+            "key_code": "illumination_decrement"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f6"
+          },
+          "to": {
+            "key_code": "illumination_increment"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f7"
+          },
+          "to": {
+            "consumer_key_code": "rewind"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f8"
+          },
+          "to": {
+            "consumer_key_code": "play_or_pause"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f9"
+          },
+          "to": {
+            "consumer_key_code": "fastforward"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f10"
+          },
+          "to": {
+            "consumer_key_code": "mute"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f11"
+          },
+          "to": {
+            "consumer_key_code": "volume_decrement"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f12"
+          },
+          "to": {
+            "consumer_key_code": "volume_increment"
+          }
+        }
+      ],
+      "name": "vscode",
+      "selected": true,
+      "simple_modifications": [],
+      "virtual_hid_keyboard": {
+        "country_code": 0
+      }
+    },
+    {
+      "complex_modifications": {
+        "parameters": {
+          "basic.simultaneous_threshold_milliseconds": 50,
+          "basic.to_delayed_action_delay_milliseconds": 500,
+          "basic.to_if_alone_timeout_milliseconds": 1000,
+          "basic.to_if_held_down_threshold_milliseconds": 500
+        },
+        "rules": []
+      },
+      "devices": [],
+      "fn_function_keys": [
+        {
+          "from": {
+            "key_code": "f1"
+          },
+          "to": {
+            "consumer_key_code": "display_brightness_decrement"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f2"
+          },
+          "to": {
+            "consumer_key_code": "display_brightness_increment"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f3"
+          },
+          "to": {
+            "key_code": "mission_control"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f4"
+          },
+          "to": {
+            "key_code": "launchpad"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f5"
+          },
+          "to": {
+            "key_code": "illumination_decrement"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f6"
+          },
+          "to": {
+            "key_code": "illumination_increment"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f7"
+          },
+          "to": {
+            "consumer_key_code": "rewind"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f8"
+          },
+          "to": {
+            "consumer_key_code": "play_or_pause"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f9"
+          },
+          "to": {
+            "consumer_key_code": "fastforward"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f10"
+          },
+          "to": {
+            "consumer_key_code": "mute"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f11"
+          },
+          "to": {
+            "consumer_key_code": "volume_decrement"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f12"
+          },
+          "to": {
+            "consumer_key_code": "volume_increment"
+          }
+        }
+      ],
+      "name": "New profile",
+      "selected": false,
+      "simple_modifications": [],
+      "virtual_hid_keyboard": {
+        "country_code": 0
+      }
+    }
+  ]
 }

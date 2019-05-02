@@ -34,6 +34,8 @@ syntax on
 " the plugins.
 let mapleader=","
 
+" Avoid the extra 'shift' keypress when typing the colon to go to cmdline mode
+:nmap ; :
 " ================ Turn Off Swap Files ==============
 
 set noswapfile
@@ -112,6 +114,7 @@ set smartcase       " ...unless we type a capital
 " Turn off error sound & flashing screen
 set visualbell
 set t_vb=
+set noerrorbells
 
 " Vim Vundle
 
@@ -139,7 +142,7 @@ colorscheme onedark
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-commentary'
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'prettier/vim-prettier'
 Plug 'mattn/emmet-vim'
@@ -151,6 +154,8 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-unimpaired'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'francoiscabrol/ranger.vim'
+let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 
 nnoremap <space>ff :FZF<CR>
 nnoremap <space>/ :Ag<CR>
@@ -158,6 +163,9 @@ nnoremap <space>fl :Lines<CR>
 nnoremap <space>l :BLines<CR>
 nnoremap <space>fw :Windows<CR>
 nnoremap <space>fb :Buffers<CR>
+
+nnoremap <space>r :Ranger<CR>
+nnoremap <space>R :source ~/.vimrc<CR>
 
 Plug 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
@@ -556,3 +564,6 @@ set termguicolors
 set term=xterm-256color
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
+"  Go to definition
+map <C-g> gd
