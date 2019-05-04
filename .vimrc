@@ -154,9 +154,11 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-unimpaired'
 Plug 'christoomey/vim-tmux-navigator'
+
 Plug 'francoiscabrol/ranger.vim'
 let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 nnoremap <space>ff :FZF<CR>
 nnoremap <space>/ :Ag<CR>
 nnoremap <space>fl :Lines<CR>
@@ -563,8 +565,6 @@ let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
 let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 set termguicolors
 set term=xterm-256color
-
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 "  Go to definition
 map <C-g> gd
