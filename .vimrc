@@ -181,6 +181,7 @@ Plug 'w0rp/ale'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
+Plug 'ianks/vim-tsx'
 
 call plug#end()
 filetype plugin indent on    " required
