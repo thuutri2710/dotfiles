@@ -270,9 +270,9 @@ map k gk
 nnoremap = :Prettier<CR>
 
 :imap jj <Esc>
-:imap kk <Esc>
-:imap jk <Esc>
-:imap kj <Esc>
+" :imap kk <Esc>
+" :imap jk <Esc>
+" :imap kj <Esc>
 " :imap ii <Esc>
 
 " switch file buffer
