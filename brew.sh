@@ -64,7 +64,6 @@ brew install ctags
 # Applications
 # brew cask install --appdir="/Applications" your-app
 brew cask install insomnia
-brew cask install iterm2
 brew cask install slack
 brew cask install visual-studio-code
 brew cask install spotify
@@ -75,5 +74,10 @@ brew cask install skype
 brew cask install karabiner
 brew cask install spectacle
 brew cask install kitty
+
+brew tap caskroom/fonts
+brew cask install font-fira-code
+
 # Remove outdated versions from the cellar.
 brew cleanup
+
