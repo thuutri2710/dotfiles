@@ -22,16 +22,13 @@ plugins=(
   z
 )
 
-source $ZSH/oh-my-zsh.sh
-
-alias ragnarok='cd ~/go/src/git.d.foundation/fortress/ragnarok/; source .env;'
-
 #zsh + iTerm shortcuts
 bindkey "[D" backward-word
 bindkey "[C" forward-word
 bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
 
+source $ZSH/oh-my-zsh.sh
 source ~/.aliases
 source /Users/zlatanpham/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
