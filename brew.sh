@@ -60,6 +60,7 @@ brew install node
 brew install fd
 brew install ag
 brew install ctags
+brew install bat
 
 # Applications
 # brew cask install --appdir="/Applications" your-app
