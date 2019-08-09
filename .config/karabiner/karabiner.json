@@ -11,9 +11,35 @@
           "basic.simultaneous_threshold_milliseconds": 50,
           "basic.to_delayed_action_delay_milliseconds": 500,
           "basic.to_if_alone_timeout_milliseconds": 1000,
-          "basic.to_if_held_down_threshold_milliseconds": 100
+          "basic.to_if_held_down_threshold_milliseconds": 100,
+          "mouse_motion_to_scroll.speed": 100
         },
         "rules": [
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + q to control.",
+                "from": {
+                  "key_code": "q",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_control",
+                    "modifiers": [""]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
           {
             "manipulators": [
               {
@@ -96,7 +122,165 @@
           {
             "manipulators": [
               {
-                "description": "Change caps_lock + 2 to comma/vim leader (if terminal is infront).",
+                "description": "Change caps_lock + w to option + right.",
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["com.microsoft.VSCode"],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "w",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": ["left_option"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + b to option + left.",
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["com.microsoft.VSCode"],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "b",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": ["left_option"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + o to command + right then shift + enter.",
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["com.microsoft.VSCode"],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "o",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": ["left_command"]
+                  },
+                  {
+                    "key_code": "return_or_enter",
+                    "modifiers": ["left_shift"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + y to command + c.",
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["com.microsoft.VSCode"],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "y",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "c",
+                    "modifiers": ["left_command"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock + p to command + v.",
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["com.microsoft.VSCode"],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "p",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "v",
+                    "modifiers": ["left_command"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
                 "conditions": [
                   {
                     "bundle_identifiers": [
@@ -106,6 +290,7 @@
                     "type": "frontmost_application_if"
                   }
                 ],
+                "description": "Change caps_lock + 2 to comma/vim leader (if terminal is infront).",
                 "from": {
                   "key_code": "2",
                   "modifiers": {
@@ -130,7 +315,6 @@
           {
             "manipulators": [
               {
-                "description": "Change caps_lock + 3 to ctrl + g (if termial is infront)",
                 "conditions": [
                   {
                     "bundle_identifiers": [
@@ -140,6 +324,7 @@
                     "type": "frontmost_application_if"
                   }
                 ],
+                "description": "Change caps_lock + 3 to ctrl + g (if termial is infront)",
                 "from": {
                   "key_code": "3",
                   "modifiers": {
@@ -164,7 +349,6 @@
           {
             "manipulators": [
               {
-                "description": "Change caps_lock + a to command+control+option+shift(unless terminal is infront)",
                 "conditions": [
                   {
                     "bundle_identifiers": [
@@ -174,6 +358,7 @@
                     "type": "frontmost_application_unless"
                   }
                 ],
+                "description": "Change caps_lock + a to command+control+option+shift(unless terminal is infront)",
                 "from": {
                   "key_code": "a",
                   "modifiers": {
@@ -198,7 +383,6 @@
           {
             "manipulators": [
               {
-                "description": "Change caps_lock + a to ctrl + a (if terminal is infront)",
                 "conditions": [
                   {
                     "bundle_identifiers": [
@@ -208,6 +392,7 @@
                     "type": "frontmost_application_if"
                   }
                 ],
+                "description": "Change caps_lock + a to ctrl + a (if terminal is infront)",
                 "from": {
                   "key_code": "a",
                   "modifiers": {
@@ -243,31 +428,6 @@
                   {
                     "key_code": "left_command",
                     "modifiers": ["left_control", "left_option"]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "manipulators": [
-              {
-                "description": "Change caps_lock + q to control.",
-                "from": {
-                  "key_code": "q",
-                  "modifiers": {
-                    "mandatory": [
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ],
-                    "optional": ["any"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "left_control",
-                    "modifiers": [""]
                   }
                 ],
                 "type": "basic"
@@ -1401,10 +1561,14 @@
         }
       ],
       "name": "vscode",
+      "parameters": {
+        "delay_milliseconds_before_open_device": 1000
+      },
       "selected": true,
       "simple_modifications": [],
       "virtual_hid_keyboard": {
-        "country_code": 0
+        "country_code": 0,
+        "mouse_key_xy_scale": 100
       }
     },
     {
@@ -1413,7 +1577,8 @@
           "basic.simultaneous_threshold_milliseconds": 50,
           "basic.to_delayed_action_delay_milliseconds": 500,
           "basic.to_if_alone_timeout_milliseconds": 1000,
-          "basic.to_if_held_down_threshold_milliseconds": 500
+          "basic.to_if_held_down_threshold_milliseconds": 500,
+          "mouse_motion_to_scroll.speed": 100
         },
         "rules": []
       },
@@ -1517,11 +1682,16 @@
         }
       ],
       "name": "New profile",
+      "parameters": {
+        "delay_milliseconds_before_open_device": 1000
+      },
       "selected": false,
       "simple_modifications": [],
       "virtual_hid_keyboard": {
-        "country_code": 0
+        "country_code": 0,
+        "mouse_key_xy_scale": 100
       }
     }
   ]
 }
+
