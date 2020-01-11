@@ -1,0 +1,74 @@
+{
+	"editor.formatOnSave": true,
+	"workbench.editor.revealIfOpen": false,
+	"prettier.singleQuote": true,
+	"prettier.trailingComma": "all",
+	"javascript.validate.enable": false,
+	"eslint.packageManager": "yarn",
+	"editor.minimap.enabled": false,
+	"editor.fontFamily": "FiraCode-Retina",
+	"editor.fontLigatures": true,
+	"workbench.list.automaticKeyboardNavigation": false,
+	"window.zoomLevel": -1,
+	"terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+	"terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+	"editor.scrollBeyondLastLine": false,
+	"workbench.colorTheme": "One Dark Pro",
+	"materialTheme.fixIconsRunning": false,
+	"workbench.iconTheme": "material-icon-theme",
+	"sync.gist": "38964f78f21bfffab29e4594388c67d2",
+	"sync.host": "",
+	"sync.pathPrefix": "",
+	"sync.quietSync": false,
+	"sync.askGistName": false,
+	"sync.removeExtensions": true,
+	"sync.syncExtensions": true,
+	"sync.autoDownload": false,
+	"sync.autoUpload": false,
+	"sync.lastUpload": "2018-08-14T07:10:51.992Z",
+	"sync.lastDownload": "",
+	"sync.forceDownload": false,
+	"emmet.triggerExpansionOnTab": true,
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact",
+		"vue-html": "html",
+		"plaintext": "jade"
+	},
+	"update.mode": "manual",
+	"javascript.updateImportsOnFileMove.enabled": "never",
+	"breadcrumbs.enabled": false,
+	"search.exclude": {
+		"**/.git": true,
+		"**/bower_components": true,
+		"**/build": true,
+		"**/coverage": true,
+		"**/dist": true,
+		"**/node_modules": true,
+		"**/tmp": true
+	},
+	"workbench.list.keyboardNavigation": "filter",
+	"material-icon-theme.folders.color": "#90a4ae",
+	"files.trimTrailingWhitespace": true,
+	"emmet.syntaxProfiles": {
+		"javascript": "jsx",
+		"typescript": "jsx",
+		"typescriptreact": "jsx",
+		"xml": {
+			"attr_quotes": "single"
+		}
+	},
+	"workbench.statusBar.visible": true,
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.suggestSelection": "first",
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"workbench.activityBar.visible": false,
+	"[typescript]": {}
+}

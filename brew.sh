@@ -61,6 +61,7 @@ brew install fd
 brew install ag
 brew install ctags
 brew install bat
+brew install thefuck
 
 # Applications
 # brew cask install --appdir="/Applications" your-app
@@ -75,6 +76,8 @@ brew cask install skype
 brew cask install karabiner
 brew cask install spectacle
 brew cask install kitty
+brew cask install rocket
+brew cask install firefox
 
 brew tap caskroom/fonts
 brew cask install font-fira-code
