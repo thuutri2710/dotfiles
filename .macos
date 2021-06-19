@@ -903,25 +903,24 @@ defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
 
 for app in "Activity Monitor" \
 	"Address Book" \
+	"Brave" \
 	"Calendar" \
 	"cfprefsd" \
-	"Contacts" \
+
 	"Dock" \
-	"Finder" \
+
 	"Google Chrome Canary" \
 	"Google Chrome" \
 	"Mail" \
-	"Messages" \
-	"Opera" \
-	"Photos" \
-	"Safari" \
+
+
+
 	"SizeUp" \
 	"Spectacle" \
 	"SystemUIServer" \
 	"Terminal" \
 	"Transmission" \
-	"Tweetbot" \
-	"Twitter" \
+	"Visual Studio Code" \
 	"iCal"; do
 	killall "${app}" &> /dev/null
 done
