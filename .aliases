@@ -13,23 +13,8 @@ alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
-alias w="cd ~/work"
+alias w="cd ~/Workspace"
 
-alias g="git"
-alias gs='git status '
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit'
-alias gd='git diff'
-alias gco='git checkout '
-#alias go='git checkout '
-alias gk='gitk --all&'
-alias gx='gitx --all'
-alias gbl='git log --oneline --graph --decorate'
-alias gcan='git commit --amend --no-edit'
-
-alias got='git '
-alias get='git '
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
