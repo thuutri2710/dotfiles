@@ -43,7 +43,7 @@ brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
-brew install php
+
 brew install gmp
 
 # Install font tools.
@@ -69,15 +69,14 @@ brew cask install insomnia
 brew cask install slack
 brew cask install visual-studio-code
 brew cask install spotify
-brew cask install 1password
-brew cask install firefox
-brew cask install dropbox
-brew cask install skype
+brew cask install rectangle
+
+
 brew cask install karabiner
 brew cask install spectacle
 brew cask install kitty
 brew cask install rocket
-brew cask install firefox
+
 
 brew tap caskroom/fonts
 brew cask install font-fira-code
